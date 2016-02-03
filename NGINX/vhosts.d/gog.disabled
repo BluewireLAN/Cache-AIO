@@ -1,0 +1,12 @@
+server {
+	listen lancache-gog deferred default;
+	server_name gog _;
+	# DNS entries:
+	# lancache-gog cdn.gog.com wpc.11df.deltacdn.net 11df-eu-lb.wpc.edgecastcdn.net 11df-eu-lb.apr-11df.edgecastdns.net
+	access_log /data/www/logs/lancache-gog-access.log main buffer=128k flush=1m;
+	error_log  /data/www/logs/lancache-gog-error.log;
+	
+
+	include conf/node-default;
+
+}

@@ -1,0 +1,9 @@
+server {
+	listen 10.5.50.248  default;
+	server_name lancache _;
+	access_log /data/www/logs/lancache-status-access.log;
+	error_log /data/www/logs/lancache-status-error.log;
+	location = / {
+		stub_status on;
+	}
+}

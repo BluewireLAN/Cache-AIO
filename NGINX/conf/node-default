@@ -1,0 +1,7 @@
+# Default Node
+include conf/resolver;
+include conf/cache-key-default;
+
+location / {
+	include conf/cache-installs;
+}

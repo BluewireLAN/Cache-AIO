@@ -1,0 +1,6 @@
+# PassThrough Node
+include conf/resolver;
+
+location / {
+	include conf/proxy-base;
+}

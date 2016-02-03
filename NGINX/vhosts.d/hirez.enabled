@@ -1,0 +1,12 @@
+server {
+	listen lancache-hirez  default;
+	server_name hirez _;
+	# DNS entries:
+	# lancache-hirez hirez.http.internapcdn.net
+
+	# We don't cache the main download as thats on *.hwcdn.net which containts lots
+	# more than just hirez e.g. store.steampowered.com which is https.
+	access_log /data/www/logs/lancache-hirez-access.log main buffer=128k flush=1m;
+	error_log /data/www/logs/lancache-hirez-error.log;
+	include lancache/node-default;
+}

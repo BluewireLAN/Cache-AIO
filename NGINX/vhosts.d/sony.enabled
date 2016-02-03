@@ -1,0 +1,9 @@
+server {
+	listen lancache-sony  default;
+	server_name sony _;
+	# DNS entries:
+	# lancache-sony pls.patch.station.sony.com
+	access_log /data/www/logs/lancache-sony-access.log main buffer=128k flush=1m;
+	error_log /data/www/logs/lancache-sony-error.log;
+	include conf/node-default;
+}

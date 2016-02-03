@@ -1,0 +1,1 @@
+proxy_cache_path /data/www/cache/installs levels=2:2 keys_zone=installs:500m inactive=365d max_size=972800m ;
