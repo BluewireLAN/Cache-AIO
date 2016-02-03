@@ -8,5 +8,5 @@ server {
 	# more than just hirez e.g. store.steampowered.com which is https.
 	access_log /data/www/logs/lancache-hirez-access.log main buffer=128k flush=1m;
 	error_log /data/www/logs/lancache-hirez-error.log;
-	include lancache/node-default;
+	include conf/node-default;
 }
